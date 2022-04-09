@@ -1,4 +1,4 @@
-## Comparison of Proximal Policy Optimization, Soft Actor Critic and Twin Delayed in Solving Bipedal Walker Task + Genetic Algorithm Hyperparameter Optimization
+## Comparison of Proximal Policy Optimization(PPO), Soft Actor Critic(SAC) and Twin Delayed(TD3) in Solving Bipedal Walker Task + Genetic Algorithm Hyperparameter Optimization
 
 ![Demo](demo.gif)
 
