@@ -20,7 +20,7 @@ git clone https://github.com/ChengyuanSha/RL-Bipedal-Walker
 ## File Structure
 
 * `PPO` folder:
-  * `Main.ipynb` containing the training of PPO algorithm on Bipedal Walker
+  * `PPO.ipynb` containing the training of PPO-Clip algorithm on Bipedal Walker
 
   
 ## Training
@@ -30,13 +30,6 @@ git clone https://github.com/ChengyuanSha/RL-Bipedal-Walker
 ## Evaluation
 
 
-
-## Pre-trained Models
-
-
-
-
-## Results
 
 
 ## Contributing
