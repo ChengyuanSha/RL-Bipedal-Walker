@@ -1,4 +1,3 @@
-# Twin Delayed Deep Deterministic (TD3) policy gradient algorithm
 from collections import deque
 from models import ReplayBuffer
 from configs import n_episodes,max_len,start_timestep,std_noise
