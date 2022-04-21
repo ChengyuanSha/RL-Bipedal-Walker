@@ -19,15 +19,16 @@ def train(env,agent):
         timestep = 0
         total_reward = 0
 
-        # Reset environment
+        # Reset environment and the done flag
         state, done = env.reset(), False
 
         while True:
 
-            # Select action randomly or according to policy
+            # Select action randomly while below the target time step(for exploration)
             if total_timesteps < start_timestep:
                 action = env.action_space.sample()
             else:
+                # Select a certain action
                 action = agent.select_action(np.array(state))
                 if std_noise != 0: 
                     shift_action = np.random.normal(0, std_noise, size=agent.action_dim)
@@ -53,7 +54,6 @@ def train(env,agent):
 
         avg_score = np.mean(scores_deque)
 
-        # train_by_episode(time_start, i_episode)
         to_print = '{},{},{}\n'.format(i_episode, total_timesteps, avg_score)
         print('Ep. {}, Timestep {},  Ep.Timesteps {}, Avg.Score: {:.2f} '\
                 .format(i_episode, total_timesteps, timestep, avg_score))
