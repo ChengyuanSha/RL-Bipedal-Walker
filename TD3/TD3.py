@@ -51,7 +51,7 @@ class TD3:
             # Get current Q estimates
             current_Q1, current_Q2 = self.cr1(state, action), self.cr2(state, action)
 
-            # Compute critic loss
+            # Compute the loss of two critics
             cr1_loss, cr2_loss = map(lambda x: F.mse_loss(x, target_Q), [current_Q1,current_Q2])
 
             # Optimize the critic
@@ -62,7 +62,7 @@ class TD3:
 
             map(lambda x,y:optim(x,y),zip([self.cr1_optimizer,self.cr2_optimizer],[cr1_loss,cr2_loss]))
 
-            # Delayed policy updates
+            # Update the actor every two steps
             if it % policy_freq == 0:
 
                 # Compute actor loss
@@ -71,9 +71,9 @@ class TD3:
                 # Optimize the actor 
                 optim(self.ac_optimizer,ac_loss)
 
-                # Update the frozen target models
                 self.update_param(tau)
 
+    # Update the networks
     def update_param(self, tau):
         if tau == None:
             return
