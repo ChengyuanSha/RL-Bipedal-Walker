@@ -19,24 +19,13 @@ git clone https://github.com/ChengyuanSha/RL-Bipedal-Walker
 
 ## File Structure
 
-* `PPO` folder:
-  * `PPO.ipynb` containing the training of PPO-Clip algorithm on Bipedal Walker
-
-  
-## Training
-
-
-
-## Evaluation
+* `PPO` folder by Chengyuan Sha:
+  * `PPO.ipynb` 
+* `SAC` folder by Dongjun Jin:
+  * `main.ipynb`
+* `TD3` folder by Jinting Zhang:
+  * `main.ipynb`
 
 
 
-
-## Contributing
-If you'd like to contribute, or have any suggestions, you 
-can open an issue on this GitHub repository.
-All contributions welcome! All content in this repository is licensed under the MIT license.
-
-
-## Reference 
 
